@@ -1,3 +1,4 @@
+// rest api data load
 const loadPhone = async (searchBar) => {
         const res = await  fetch(`https://openapi.programming-hero.com/api/phones?search=${searchBar}`);
         const data = await res.json();
@@ -23,6 +24,7 @@ const loadPhoneShow = (phone) => {
     // display product show system --------------------
     phone = phone.slice(0, 6);
 
+    // product data load and display show
     phone.forEach(phones => {
         const productCard = document.createElement('div');
         productCard.classList = `card bg-base-100 shadow-xl my-5`;
@@ -38,15 +40,34 @@ const loadPhoneShow = (phone) => {
         `
         productContaine.appendChild(productCard);
     });
+
+    // loader data fuction call 
+    toggole(false);
 }
 
 // -------------------------------------------------------
 
+
+// search button 
 const searchBtn = () => {
+    // loader Data function call
+    toggole(true);
+
+
     const searchBar = document.getElementById('searchBar');
     const searchValue = searchBar.value;
     loadPhone(searchValue);
+}
 
+// loader data
+const toggole = (istoggole) => {
+    const spanerContainer = document.getElementById('spinnercontainer');
+   if(istoggole){
+    spanerContainer.classList.remove('hidden');
+   }
+   else{
+    spanerContainer.classList.add('hidden');
+   }
 }
 
 
