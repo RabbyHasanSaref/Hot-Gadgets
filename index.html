@@ -120,8 +120,36 @@
 
        <!-- show Button section  -->
        <div id="showbutton" class="text-center my-5 hidden">
-        <button class="btn  btn-primary ">Show All</button>
+        <button onclick="showAll()" id="showall" class="btn  btn-primary ">Show All</button>
         </div>
+
+        <!-- modal show  -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <div id="images" class="flex justify-center">
+                <!-- <img id="img" src="./image/phone.png" alt=""> -->
+            </div>
+            <div class="space-y-5">
+                <h4 id="phon-name" class="text-xl font-semibold text-black">Iphone 13 Pro Max</h4>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p><span class="font-bold">Storage :</span> <span id="storeg">128GB/256GB/1TB Storage, No card slot</span></p>
+                <p><span class="font-bold">Display Size :</span> <span id="displaysize">6.7 Inches, 109.8 cm</span></p>
+                <p><span class="font-bold">Chipset :</span> <span id="chip">Apple A15 Bionic</span></p>
+                <p><span class="font-bold">Memory :</span> <span id="ram">128GB 6 GB RAM, 256GB RAM, 512GB RAM1 1TB 6GB RAM</span></p>
+                <p><span class="font-bold">Slug :</span> <span id="title">Applice_Iphone_13_Pro_Max</span></p>
+                <p><span class="font-bold">Release data :</span> <span id="release">Released 2021, September 24</span></p>
+                <p><span class="font-bold">Brand :</span> <span id="barnd">Apple</span></p>
+                <p><span class="font-bold">GPS :</span> <span id="gps"> AYes, with A-GPS, GLONASS, GALILEO, BDS, QZSS</span></p>
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn btn-warning ">Close</button>
+                </form>
+              </div>
+        </div>
+        </dialog>
       </main>
       <!-- Main Area End -->
 
